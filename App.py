@@ -55,11 +55,11 @@ with col4:
 with col5:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Pyrolysis and adsorption conditions</p>', unsafe_allow_html=True)
     feature26 = st.slider('Wash_Pre (HCl/H2O(−1/1))', min_value=-1, max_value=1, step=1, value=0)
-    feature27 = st.slider('Wash_Post (HCl/H2O(−1/1))', min_value=-1, max_value=1, step=1, value=0)
-    feature28 = st.slider('HR (°C/min)', min_value=1, max_value=50, step=1, value=10)
-    feature29 = st.slider('PT (°C)', min_value=250, max_value=1000, step=1, value=500)
-    feature30 = st.slider('Pt (min)', min_value=0, max_value=240, step=1, value=20)
-    feature31 = st.slider('CO2_AT (°C)', min_value=0, max_value=75, step=25, value=25)
+    feature27 = st.slider('Wash_Post (HCl/H2O(−1/1))', min_value=-1, max_value=1, step=1, value=-1)
+    feature28 = st.slider('HR (°C/min)', min_value=1, max_value=50, step=1, value=3)
+    feature29 = st.slider('PT (°C)', min_value=250, max_value=1000, step=1, value=440)
+    feature30 = st.slider('Pt (min)', min_value=0, max_value=240, step=1, value=50)
+    feature31 = st.slider('CO2_AT (°C)', min_value=0, max_value=75, step=25, value=0)
     feature32 = st.slider('CO2_Ap (bar)', min_value=0.1, max_value=1.0, step=0.1, value=1.0)
 
 # 预测按钮
