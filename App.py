@@ -71,4 +71,4 @@ if st.button('Predict'):
                             feature30, feature31, feature32]])
     prediction = model.predict(input_data)
     formatted_prediction = "{:.2f}".format(prediction[0])
-    st.write(f'<p style="font-size: 24px; color: blue; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">CO<sub>2</sub> Adsorption Capacity (mmol/g): {formatted_prediction}</p>', unsafe_allow_html=True)
+    st.write(f'<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">CO<sub>2</sub> Adsorption Capacity (mmol/g): {formatted_prediction}</p>', unsafe_allow_html=True)
