@@ -33,6 +33,13 @@ with col3:
     feature9 = st.slider('Chem_Act_Imp_S (biomass/biochar/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=1)
     if feature9 == 0:
         feature10, feature11, feature12, feature13, feature14, feature15 = 0, 0, 0, 0, 0, 0
+    elif feature9 == -1:
+        feature10 = st.slider('Chem_Act_Imp_A (pKB)', min_value=-1.10, max_value=20.00, step=0.01, value=-0.56)
+        feature11 = st.slider('Chem_Act_Imp_t (min)', min_value=0, max_value=1440, step=1, value=530)
+        feature12 = st.slider('Chem_Act_Imp_T (°C)', min_value=0, max_value=80, step=1, value=24)
+        feature13 = st.slider('Chem_Act_Imp_R', min_value=0.0, max_value=3.0, step=0.1, value=3.0)
+        feature14 = feature29
+        feature15 = feature30
     else:
         feature10 = st.slider('Chem_Act_Imp_A (pKB)', min_value=-1.10, max_value=20.00, step=0.01, value=-0.56)
         feature11 = st.slider('Chem_Act_Imp_t (min)', min_value=0, max_value=1440, step=1, value=530)
@@ -41,30 +48,37 @@ with col3:
         feature14 = st.slider('Chem_Act_Imp_AT (°C)', min_value=0, max_value=1000, step=10, value=840)
         feature15 = st.slider('Chem_Act_Imp_At (min)', min_value=0, max_value=120, step=1, value=110)
 
-
 with col4:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Mixing activation</p>', unsafe_allow_html=True)
     feature16 = st.slider('Chem_Act_Mix_S (biomass/biochar/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
     if feature16 == 0:
         feature17, feature18, feature19, feature20 = 0, 0, 0, 0
+    elif feature16 == -1:
+        feature17 = st.slider('Chem_Act_Mix_A (pKB)', min_value=-1.10, max_value=11.30, step=0.01, value=0.00)
+        feature18 = st.slider('Chem_Act_Mix_R', min_value=0.0, max_value=5.0, step=0.1, value=0.0)
+        feature19 = feature29
+        feature20 = feature30
     else:
         feature17 = st.slider('Chem_Act_Mix_A (pKB)', min_value=-1.10, max_value=11.30, step=0.01, value=0.00)
         feature18 = st.slider('Chem_Act_Mix_R', min_value=0.0, max_value=5.0, step=0.1, value=0.0)
         feature19 = st.slider('Chem_Act_Mix_AT (°C)', min_value=0, max_value=1000, step=10, value=0)
         feature20 = st.slider('Chem_Act_Mix_At (min)', min_value=0, max_value=180, step=1, value=0)
 
-
 with col5:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Physical activation</p>', unsafe_allow_html=True)
     feature21 = st.slider('Ph_Act_Gas_S (biomass/biochar/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
     if feature21 == 0:
         feature22, feature23, feature24, feature25 = 0, 0, 0, 0
+    elif feature21 == -1:
+        feature22 = st.slider('Ph_Act_Gas_A (steam/CO2/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
+        feature23 = st.slider('Ph_Act_Gas_F (mL/min)', min_value=0.0, max_value=100.0, step=0.1, value=0.0)
+        feature24 = feature29
+        feature25 = feature30
     else:
         feature22 = st.slider('Ph_Act_Gas_A (steam/CO2/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
         feature23 = st.slider('Ph_Act_Gas_F (mL/min)', min_value=0.0, max_value=100.0, step=0.1, value=0.0)
         feature24 = st.slider('Ph_Act_Gas_AT (°C)', min_value=0, max_value=900, step=10, value=0)
         feature25 = st.slider('Ph_Act_Gas_At (min)', min_value=0, max_value=180, step=1, value=0)
-
 
 with col6:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Adsorption</p>', unsafe_allow_html=True)
