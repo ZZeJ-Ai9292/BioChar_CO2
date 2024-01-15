@@ -93,12 +93,6 @@ with col6:
 
 # 预测按钮
 if st.button('Predict'):
-    if feature9 == 0:
-        feature10, feature11, feature12, feature13, feature14, feature15 = 0, 0, 0, 0, 0, 0
-    if feature16 == 0:
-        feature17, feature18, feature19, feature20 = 0, 0, 0, 0
-    if feature21 == 0:
-        feature22, feature23, feature24, feature25 = 0, 0, 0, 0
     input_data = np.array([[feature1, feature2, feature3, feature4, feature5, feature6, feature7, feature8,
                             feature9, feature10, feature11, feature12, feature13, feature14, feature15,
                             feature16, feature17, feature18, feature19, feature20, feature21, feature22,
