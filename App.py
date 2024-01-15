@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 
-model = joblib.load('model1.pkl')
+model = joblib.load('model.pkl')
 
 st.set_page_config(layout="wide")
 st.markdown('<h1 style="text-align: center; font-family: \'Times New Roman\', Times, serif;">Prediction of CO<sub style="font-size: 70%;">2</sub> adsorption capacity of biochar</h1>', unsafe_allow_html=True)
@@ -22,15 +22,15 @@ with col1:
 
 with col2:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Pyrolysis</p>', unsafe_allow_html=True)
-    feature26 = st.slider('Wash_Pre (HCl/H2O(−1/1))', min_value=-1, max_value=1, step=1, value=0)
-    feature27 = st.slider('Wash_Post (HCl/H2O(−1/1))', min_value=-1, max_value=1, step=1, value=-1)
+    feature26 = st.slider('Wash_Pre (HCl/H2O/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
+    feature27 = st.slider('Wash_Post (HCl/H2O/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=-1)
     feature28 = st.slider('HR (°C/min)', min_value=0, max_value=50, step=1, value=3)
     feature29 = st.slider('PT (°C)', min_value=0, max_value=1000, step=1, value=440)
     feature30 = st.slider('Pt (min)', min_value=0, max_value=240, step=1, value=50)
 
 with col3:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Impregnation activation</p>', unsafe_allow_html=True)
-    feature9 = st.slider('Chem_Act_Imp_S (biomass/biochar(−1/1))', min_value=-1, max_value=1, step=1, value=1)
+    feature9 = st.slider('Chem_Act_Imp_S (biomass/biochar/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=1)
     if feature9 == 0:
         feature10, feature11, feature12, feature13, feature14, feature15 = 0, 0, 0, 0, 0, 0
     else:
@@ -44,7 +44,7 @@ with col3:
 
 with col4:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Mixing activation</p>', unsafe_allow_html=True)
-    feature16 = st.slider('Chem_Act_Mix_S (biomass/biochar(−1/1))', min_value=-1, max_value=1, step=1, value=0)
+    feature16 = st.slider('Chem_Act_Mix_S (biomass/biochar/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
     if feature16 == 0:
         feature17, feature18, feature19, feature20 = 0, 0, 0, 0
     else:
@@ -56,11 +56,11 @@ with col4:
 
 with col5:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Physical activation</p>', unsafe_allow_html=True)
-    feature21 = st.slider('Ph_Act_Gas_S (biomass/biochar(−1/1))', min_value=-1, max_value=1, step=1, value=0)
+    feature21 = st.slider('Ph_Act_Gas_S (biomass/biochar/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
     if feature21 == 0:
         feature22, feature23, feature24, feature25 = 0, 0, 0, 0
     else:
-        feature22 = st.slider('Ph_Act_Gas_A (steam/CO2(−1/1))', min_value=-1, max_value=1, step=1, value=0)
+        feature22 = st.slider('Ph_Act_Gas_A (steam/CO2/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
         feature23 = st.slider('Ph_Act_Gas_F (mL/min)', min_value=0.0, max_value=100.0, step=0.1, value=0.0)
         feature24 = st.slider('Ph_Act_Gas_AT (°C)', min_value=0, max_value=900, step=10, value=0)
         feature25 = st.slider('Ph_Act_Gas_At (min)', min_value=0, max_value=180, step=1, value=0)
