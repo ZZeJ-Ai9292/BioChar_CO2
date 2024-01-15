@@ -32,7 +32,7 @@ with col3:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Impregnation activation</p>', unsafe_allow_html=True)
     feature9 = st.slider('Chem_Act_Imp_S (biomass/biochar(−1/1))', min_value=-1, max_value=1, step=1, value=1)
     if feature9 == -1:
-        feature10, feature11, feature12, feature13, feature14, feature15 = feature10 = st.slider('Chem_Act_Imp_A (pKB)', min_value=-1.10, max_value=20.00, step=0.01, value=-0.56), feature11 = st.slider('Chem_Act_Imp_t (min)', min_value=0, max_value=1440, step=1, value=530), feature12 = st.slider('Chem_Act_Imp_T (°C)', min_value=0, max_value=80, step=1, value=24), feature13 = st.slider('Chem_Act_Imp_R', min_value=0.0, max_value=3.0, step=0.1, value=3.0), feature29, feature30
+        feature14, feature15 = feature29, feature30
     elif feature9 == 0:
         feature10, feature11, feature12, feature13, feature14, feature15 = 0, 0, 0, 0, 0, 0
     else:
@@ -49,7 +49,7 @@ with col4:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Mixing activation</p>', unsafe_allow_html=True)
     feature16 = st.slider('Chem_Act_Mix_S (biomass/biochar(−1/1))', min_value=-1, max_value=1, step=1, value=0)
     if feature16 == -1:
-        feature17, feature18, feature19, feature20 = 0, 0, feature29, feature30
+        feature19, feature20 = feature29, feature30
     elif feature16 == 0:
         feature17, feature18, feature19, feature20 = 0, 0, 0, 0
     else:
@@ -64,7 +64,7 @@ with col5:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Physical activation</p>', unsafe_allow_html=True)
     feature21 = st.slider('Ph_Act_Gas_S (biomass/biochar(−1/1))', min_value=-1, max_value=1, step=1, value=0)
     if feature21 == -1:
-        feature22, feature23, feature24, feature25 = 0, 0, feature29, feature30
+        feature24, feature25 = feature29, feature30
     elif feature21 == 0:
         feature22, feature23, feature24, feature25 = 0, 0, 0, 0
     else:
@@ -83,15 +83,15 @@ with col6:
 # 预测按钮
 if st.button('Predict'):
     if feature9 == -1:
-        feature10, feature11, feature12, feature13, feature14, feature15 = 0, 0, 0, 0, feature29, feature30
+        feature14, feature15 = feature29, feature30
     elif feature9 == 0:
         feature10, feature11, feature12, feature13, feature14, feature15 = 0, 0, 0, 0, 0, 0
     if feature16 == -1:
-        feature17, feature18, feature19, feature20 = 0, 0, feature29, feature30
+        feature19, feature20 = feature29, feature30
     elif feature16 == 0:
         feature17, feature18, feature19, feature20 = 0, 0, 0, 0
     if feature21 == -1:
-        feature22, feature23, feature24, feature25 = 0, 0, feature29, feature30
+        feature24, feature25 = feature29, feature30
     elif feature21 == 0:
         feature22, feature23, feature24, feature25 = 0, 0, 0, 0
     input_data = np.array([[feature1, feature2, feature3, feature4, feature5, feature6, feature7, feature8,
