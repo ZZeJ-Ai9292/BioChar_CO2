@@ -33,6 +33,7 @@ with col3:
     feature9 = st.slider('Chem_Act_Imp_S (biomass/biochar/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=1)
     if feature9 == 0:
         feature10, feature11, feature12, feature13, feature14, feature15 = 0, 0, 0, 0, 0, 0
+        st.write(f'Without Impregnation activation')
     elif feature9 == -1:
         feature10 = st.slider('Chem_Act_Imp_A (pKB)', min_value=-1.10, max_value=20.00, step=0.01, value=-0.56)
         feature11 = st.slider('Chem_Act_Imp_t (min)', min_value=0, max_value=1440, step=1, value=530)
@@ -55,6 +56,7 @@ with col4:
     feature16 = st.slider('Chem_Act_Mix_S (biomass/biochar/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
     if feature16 == 0:
         feature17, feature18, feature19, feature20 = 0, 0, 0, 0
+        st.write(f'Without mixing activation')
     elif feature16 == -1:
         feature17 = st.slider('Chem_Act_Mix_A (pKB)', min_value=-1.10, max_value=11.30, step=0.01, value=0.00)
         feature18 = st.slider('Chem_Act_Mix_R', min_value=0.0, max_value=5.0, step=0.1, value=0.0)
@@ -73,6 +75,7 @@ with col5:
     feature21 = st.slider('Ph_Act_Gas_S (biomass/biochar/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
     if feature21 == 0:
         feature22, feature23, feature24, feature25 = 0, 0, 0, 0
+        st.write(f'Without Physical activation')
     elif feature21 == -1:
         feature22 = st.slider('Ph_Act_Gas_A (steam/CO2/None(−1/1/0))', min_value=-1, max_value=1, step=1, value=0)
         feature23 = st.slider('Ph_Act_Gas_F (mL/min)', min_value=0.0, max_value=100.0, step=0.1, value=0.0)
