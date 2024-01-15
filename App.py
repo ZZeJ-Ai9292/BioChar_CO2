@@ -32,7 +32,7 @@ with col3:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Impregnation activation</p>', unsafe_allow_html=True)
     feature9 = st.slider('Chem_Act_Imp_S (biomass/biochar(−1/1))', min_value=-1, max_value=1, step=1, value=1)
     if feature9 == -1:
-        feature10, feature11, feature12, feature13, feature14, feature15 = 0, 0, 0, 0, feature29, feature30
+        feature10, feature11, feature12, feature13, feature14, feature15 = feature10 = st.slider('Chem_Act_Imp_A (pKB)', min_value=-1.10, max_value=20.00, step=0.01, value=-0.56), feature11 = st.slider('Chem_Act_Imp_t (min)', min_value=0, max_value=1440, step=1, value=530), feature12 = st.slider('Chem_Act_Imp_T (°C)', min_value=0, max_value=80, step=1, value=24), feature13 = st.slider('Chem_Act_Imp_R', min_value=0.0, max_value=3.0, step=0.1, value=3.0), feature29, feature30
     elif feature9 == 0:
         feature10, feature11, feature12, feature13, feature14, feature15 = 0, 0, 0, 0, 0, 0
     else:
