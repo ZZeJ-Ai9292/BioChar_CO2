@@ -11,22 +11,28 @@ col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 with col1:
     st.markdown('<p style="font-size: 24px; color: red; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
-    st.write('<style>.slider-label { font-weight: bold; }</style>', unsafe_allow_html=True)
     feature1 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=76.42, format="%.2f", key='feature1')
-    st.write('<label class="slider-label">VM (%)</label>', unsafe_allow_html=True)
+    st.write('<style>.slider-label { font-weight: bold; }</style>', unsafe_allow_html=True)
     feature2 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=3.98, format="%.2f", key='feature2')
-    st.write('<label class="slider-label">Ash (%)</label>', unsafe_allow_html=True)
+    st.write('<label class="slider-label">VM (%)</label>', unsafe_allow_html=True)
     feature3 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=19.61, format="%.2f", key='feature3')
-    st.write('<label class="slider-label">FC (%)</label>', unsafe_allow_html=True)
+    st.write('<label class="slider-label">Ash (%)</label>', unsafe_allow_html=True)
     feature4 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=46.44, format="%.2f", key='feature4')
-    st.write('<label class="slider-label">C (%)</label>', unsafe_allow_html=True)
+    st.write('<label class="slider-label">FC (%)</label>', unsafe_allow_html=True)
+    
     feature5 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=6.36, format="%.2f", key='feature5')
-    st.write('<label class="slider-label">H (%)</label>', unsafe_allow_html=True)
+    st.write('<label class="slider-label">C (%)</label>', unsafe_allow_html=True)
+    
     feature6 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=0.91, format="%.2f", key='feature6')
-    st.write('<label class="slider-label">N (%)</label>', unsafe_allow_html=True)
+    st.write('<label class="slider-label">H (%)</label>', unsafe_allow_html=True)
+    
     feature7 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=0.38, format="%.2f", key='feature7')
-    st.write('<label class="slider-label">S (%)</label>', unsafe_allow_html=True)
+    st.write('<label class="slider-label">N (%)</label>', unsafe_allow_html=True)
+    
     feature8 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=45.92, format="%.2f", key='feature8')
+    st.write('<label class="slider-label">S (%)</label>', unsafe_allow_html=True)
+    
+    
     st.write('<label class="slider-label">O (%)</label>', unsafe_allow_html=True)
 
 with col2:
