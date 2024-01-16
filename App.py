@@ -10,26 +10,30 @@ st.markdown('<h1 style="text-align: center; font-family: \'Times New Roman\', Ti
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 with col1:
-    st.markdown('<p style="font-size: 24px; color: red; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
-    st.write('<style>.slider-label { font-weight: bold; }</style>', unsafe_allow_html=True)
-    st.write('<label class="slider-label" style="margin-bottom: 10px;">VM (%)</label>', unsafe_allow_html=True)
-    feature1 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=76.42, format="%.2f", key='feature1')
-    st.write('<label class="slider-label" style="margin-bottom: 10px;>Ash (%)</label>', unsafe_allow_html=True)
-    feature2 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=3.98, format="%.2f", key='feature2')
-    st.write('<label class="slider-label" style="margin-bottom: 10px;>FC (%)</label>', unsafe_allow_html=True)
-    feature3 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=19.61, format="%.2f", key='feature3')
-    st.write('<label class="slider-label" style="margin-bottom: 10px;>C (%)</label>', unsafe_allow_html=True)
-    feature4 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=46.44, format="%.2f", key='feature4')
-    st.write('<label class="slider-label" style="margin-bottom: 10px;>H (%)</label>', unsafe_allow_html=True)
-    feature5 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=6.36, format="%.2f", key='feature5')
-    st.write('<label class="slider-label" style="margin-bottom: 10px;>N (%)</label>', unsafe_allow_html=True)
-    feature6 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=0.91, format="%.2f", key='feature6')
-    st.write('<label class="slider-label" style="margin-bottom: 10px;>S (%)</label>', unsafe_allow_html=True)
-    feature7 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=0.38, format="%.2f", key='feature7')
-    st.write('<label class="slider-label" style="margin-bottom: 10px;>O (%)</label>', unsafe_allow_html=True)
-    feature8 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=45.92, format="%.2f", key='feature8')
+    st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
+    st.markdown('**VM (%)**', unsafe_allow_html=True)
+    feature1 = st.slider('VM', min_value=0.00, max_value=100.00, step=0.01, value=76.42)
     
+    st.markdown('**Ash (%)**', unsafe_allow_html=True)
+    feature2 = st.slider('Ash', min_value=0.00, max_value=100.00, step=0.01, value=3.98)
     
+    st.markdown('**FC (%)**', unsafe_allow_html=True)
+    feature3 = st.slider('FC', min_value=0.00, max_value=100.00, step=0.01, value=19.61)
+    
+    st.markdown('**C (%)**', unsafe_allow_html=True)
+    feature4 = st.slider('C', min_value=0.00, max_value=100.00, step=0.01, value=46.44)
+    
+    st.markdown('**H (%)**', unsafe_allow_html=True)
+    feature5 = st.slider('H', min_value=0.00, max_value=100.00, step=0.01, value=6.36)
+    
+    st.markdown('**N (%)**', unsafe_allow_html=True)
+    feature6 = st.slider('N', min_value=0.00, max_value=100.00, step=0.01, value=0.91)
+    
+    st.markdown('**S (%)**', unsafe_allow_html=True)
+    feature7 = st.slider('S', min_value=0.00, max_value=100.00, step=0.01, value=0.38)
+    
+    st.markdown('**O (%)**', unsafe_allow_html=True)
+    feature8 = st.slider('O', min_value=0.00, max_value=100.00, step=0.01, value=45.92)
 
 with col2:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Pyrolysis</p>', unsafe_allow_html=True)
