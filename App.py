@@ -12,28 +12,28 @@ col1, col2, col3, col4, col5, col6 = st.columns(6)
 with col1:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
     st.markdown('**VM (%)**', unsafe_allow_html=True)
-    feature1 = st.slider('VM', min_value=0.00, max_value=100.00, step=0.01, value=76.42)
+    feature1 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=76.42)
     
     st.markdown('**Ash (%)**', unsafe_allow_html=True)
-    feature2 = st.slider('Ash', min_value=0.00, max_value=100.00, step=0.01, value=3.98)
+    feature2 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=3.98)
     
     st.markdown('**FC (%)**', unsafe_allow_html=True)
-    feature3 = st.slider('FC', min_value=0.00, max_value=100.00, step=0.01, value=19.61)
+    feature3 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=19.61)
     
     st.markdown('**C (%)**', unsafe_allow_html=True)
-    feature4 = st.slider('C', min_value=0.00, max_value=100.00, step=0.01, value=46.44)
+    feature4 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=46.44)
     
     st.markdown('**H (%)**', unsafe_allow_html=True)
-    feature5 = st.slider('H', min_value=0.00, max_value=100.00, step=0.01, value=6.36)
+    feature5 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=6.36)
     
     st.markdown('**N (%)**', unsafe_allow_html=True)
-    feature6 = st.slider('N', min_value=0.00, max_value=100.00, step=0.01, value=0.91)
+    feature6 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=0.91)
     
     st.markdown('**S (%)**', unsafe_allow_html=True)
-    feature7 = st.slider('S', min_value=0.00, max_value=100.00, step=0.01, value=0.38)
+    feature7 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=0.38)
     
     st.markdown('**O (%)**', unsafe_allow_html=True)
-    feature8 = st.slider('O', min_value=0.00, max_value=100.00, step=0.01, value=45.92)
+    feature8 = st.slider('', min_value=0.00, max_value=100.00, step=0.01, value=45.92)
 
 with col2:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Pyrolysis</p>', unsafe_allow_html=True)
