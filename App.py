@@ -11,7 +11,7 @@ col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 with col1:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
-    feature1 = st.slider('**VM (%)**', min_value=0.00, max_value=100.00, step=0.01, value=76.42)
+    feature1 = st.slider('VM (%)', min_value=0.00, max_value=100.00, step=0.01, value=76.42)
     feature2 = st.slider('Ash (%)', min_value=0.00, max_value=100.00, step=0.01, value=3.98)
     feature3 = st.slider('FC (%)', min_value=0.00, max_value=100.00, step=0.01, value=19.61)
     feature4 = st.slider('C (%)', min_value=0.00, max_value=100.00, step=0.01, value=46.44)
