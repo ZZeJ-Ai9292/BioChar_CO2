@@ -7,7 +7,7 @@ model = joblib.load('model.pkl')
 st.set_page_config(layout="wide")
 st.markdown('<h1 style="text-align: center; font-family: \'Times New Roman\', Times, serif;">Prediction of CO<sub style="font-size: 70%;">2</sub> adsorption capacity of biochar</h1>', unsafe_allow_html=True)
 
-col1, col2, col3, col4, col5 = st.columns(6)
+col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
