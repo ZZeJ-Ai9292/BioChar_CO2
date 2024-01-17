@@ -7,7 +7,7 @@ model = joblib.load('model.pkl')
 st.set_page_config(layout="wide")
 st.markdown('<h1 style="text-align: center; font-family: \'Times New Roman\', Times, serif;">Prediction of CO<sub style="font-size: 70%;">2</sub> adsorption capacity of biochar</h1>', unsafe_allow_html=True)
 
-col1, col2, col3, col4, col5, col6 = st.columns(6)
+col1, col2, col3, col4, col5 = st.columns(6)
 
 with col1:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
@@ -21,12 +21,14 @@ with col1:
     feature8 = st.slider('O (%)', min_value=0.00, max_value=100.00, step=0.01, value=45.92)
 
 with col2:
-    st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Pyrolysis</p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Pyrolysis and adsorption</p>', unsafe_allow_html=True)
     feature26 = st.slider('Wash-Pre (HCl/none/H2O — −1/0/1)', min_value=-1, max_value=1, step=1, value=0)
     feature27 = st.slider('Wash-Post (HCl/none/H2O — −1/0/1)', min_value=-1, max_value=1, step=1, value=-1)
     feature28 = st.slider('HR (°C/min)', min_value=0, max_value=50, step=1, value=3)
     feature29 = st.slider('PT (°C)', min_value=0, max_value=1000, step=1, value=440)
     feature30 = st.slider('Pt (min)', min_value=0, max_value=240, step=1, value=50)
+    feature31 = st.slider('CO2Ad-T (°C)', min_value=0, max_value=75, step=25, value=0)
+    feature32 = st.slider('CO2Ad-P (bar)', min_value=0.1, max_value=1.0, step=0.1, value=1.0)
 
 with col3:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Impregnation activation</p>', unsafe_allow_html=True)
@@ -89,12 +91,6 @@ with col5:
         feature24 = st.slider('Gas-AT (°C)', min_value=0, max_value=900, step=10, value=0)
         feature25 = st.slider('Gas-At (min)', min_value=0, max_value=180, step=1, value=0)
 
-with col6:
-    st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Adsorption</p>', unsafe_allow_html=True)
-    feature31 = st.slider('CO2Ad-T (°C)', min_value=0, max_value=75, step=25, value=0)
-    feature32 = st.slider('CO2Ad-P (bar)', min_value=0.1, max_value=1.0, step=0.1, value=1.0)
-
-# 预测按钮
 if st.button('Predict'):
     input_data = np.array([[feature1, feature2, feature3, feature4, feature5, feature6, feature7, feature8,
                             feature9, feature10, feature11, feature12, feature13, feature14, feature15,
