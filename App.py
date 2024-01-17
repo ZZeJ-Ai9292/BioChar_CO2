@@ -16,14 +16,14 @@ with col1:
         st.markdown(f'<p style="color: {color}; font-weight: bold; margin-bottom: {label_margin_bottom};">{label}</p>', unsafe_allow_html=True)
         st.slider("", min_value=min_value, max_value=max_value, step=step, value=value, format=format)
 
-    feature1 = styled_slider('VM (%)', min_value=0.00, max_value=100.00, step=0.01, value=76.42, color="blue", label_margin_bottom="60px")
-    feature2 = styled_slider('Ash (%)', min_value=0.00, max_value=100.00, step=0.01, value=3.98, color="green", label_margin_bottom="60px")
-    feature3 = styled_slider('FC (%)', min_value=0.00, max_value=100.00, step=0.01, value=19.61, color="orange", label_margin_bottom="60px")
-    feature4 = styled_slider('C (%)', min_value=0.00, max_value=100.00, step=0.01, value=46.44, color="purple", label_margin_bottom="60px")
-    feature5 = styled_slider('H (%)', min_value=0.00, max_value=100.00, step=0.01, value=6.36, color="brown", label_margin_bottom="60px")
-    feature6 = styled_slider('N (%)', min_value=0.00, max_value=100.00, step=0.01, value=0.91, color="red", label_margin_bottom="60px")
-    feature7 = styled_slider('S (%)', min_value=0.00, max_value=100.00, step=0.01, value=0.38, color="pink", label_margin_bottom="60px")
-    feature8 = styled_slider('O (%)', min_value=0.00, max_value=100.00, step=0.01, value=45.92, color="gray", label_margin_bottom="60px")
+    feature1 = styled_slider('VM (%)', min_value=0.00, max_value=100.00, step=0.01, value=76.42, color="blue", label_margin_bottom="0.01px")
+    feature2 = styled_slider('Ash (%)', min_value=0.00, max_value=100.00, step=0.01, value=3.98, color="green", label_margin_bottom="0.01px")
+    feature3 = styled_slider('FC (%)', min_value=0.00, max_value=100.00, step=0.01, value=19.61, color="orange", label_margin_bottom="0.01px")
+    feature4 = styled_slider('C (%)', min_value=0.00, max_value=100.00, step=0.01, value=46.44, color="purple", label_margin_bottom="0.01px")
+    feature5 = styled_slider('H (%)', min_value=0.00, max_value=100.00, step=0.01, value=6.36, color="brown", label_margin_bottom="0.01px")
+    feature6 = styled_slider('N (%)', min_value=0.00, max_value=100.00, step=0.01, value=0.91, color="red", label_margin_bottom="0.01px")
+    feature7 = styled_slider('S (%)', min_value=0.00, max_value=100.00, step=0.01, value=0.38, color="pink", label_margin_bottom="0.01px")
+    feature8 = styled_slider('O (%)', min_value=0.00, max_value=100.00, step=0.01, value=45.92, color="gray", label_margin_bottom="0.01px")
 
 with col2:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Pyrolysis</p>', unsafe_allow_html=True)
