@@ -10,15 +10,20 @@ st.markdown('<h1 style="text-align: center; font-family: \'Times New Roman\', Ti
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 with col1:
-    st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
-    feature1 = st.slider('VM (%)', min_value=0.00, max_value=100.00, step=0.01, value=76.42)
-    feature2 = st.slider('Ash (%)', min_value=0.00, max_value=100.00, step=0.01, value=3.98)
-    feature3 = st.slider('FC (%)', min_value=0.00, max_value=100.00, step=0.01, value=19.61)
-    feature4 = st.slider('C (%)', min_value=0.00, max_value=100.00, step=0.01, value=46.44)
-    feature5 = st.slider('H (%)', min_value=0.00, max_value=100.00, step=0.01, value=6.36)
-    feature6 = st.slider('N (%)', min_value=0.00, max_value=100.00, step=0.01, value=0.91)
-    feature7 = st.slider('S (%)', min_value=0.00, max_value=100.00, step=0.01, value=0.38)
-    feature8 = st.slider('O (%)', min_value=0.00, max_value=100.00, step=0.01, value=45.92)
+    st.markdown('<p style="font-size: 24px; color: red; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
+    
+    def colored_slider(label, min_value, max_value, step, value, format="%.2f", color="black"):
+        st.markdown(f'<span style="color: {color}; font-weight: bold;">{label}</span>', unsafe_allow_html=True)
+        return st.slider("", min_value=min_value, max_value=max_value, step=step, value=value, format=format)
+
+    feature1 = colored_slider('VM (%)', min_value=0.00, max_value=100.00, step=0.01, value=76.42, color="blue")
+    feature2 = colored_slider('Ash (%)', min_value=0.00, max_value=100.00, step=0.01, value=3.98, color="green")
+    feature3 = colored_slider('FC (%)', min_value=0.00, max_value=100.00, step=0.01, value=19.61, color="orange")
+    feature4 = colored_slider('C (%)', min_value=0.00, max_value=100.00, step=0.01, value=46.44, color="purple")
+    feature5 = colored_slider('H (%)', min_value=0.00, max_value=100.00, step=0.01, value=6.36, color="brown")
+    feature6 = colored_slider('N (%)', min_value=0.00, max_value=100.00, step=0.01, value=0.91, color="red")
+    feature7 = colored_slider('S (%)', min_value=0.00, max_value=100.00, step=0.01, value=0.38, color="pink")
+    feature8 = colored_slider('O (%)', min_value=0.00, max_value=100.00, step=0.01, value=45.92, color="gray")
 
 with col2:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Pyrolysis</p>', unsafe_allow_html=True)
