@@ -12,7 +12,7 @@ col1, col2, col3, col4, col5, col6 = st.columns(6)
 with col1:
     st.markdown('<p style="font-size: 24px; color: red; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
     
-    def styled_slider(label, min_value, max_value, step, value, format="%.2f", color="black", label_margin_right="10px", slider_margin_top="10px"):
+    def styled_slider(label, min_value, max_value, step, value, format="%.2f", color="black", label_margin_right="1px", slider_margin_top="1px"):
         st.markdown(f'<span style="color: {color}; font-weight: bold; margin-right: {label_margin_right};">{label}</span>', unsafe_allow_html=True)
         st.markdown(f'<div style="margin-top: {slider_margin_top};">{st.slider("", min_value=min_value, max_value=max_value, step=step, value=value, format=format, key=label)}</div>', unsafe_allow_html=True)
 
