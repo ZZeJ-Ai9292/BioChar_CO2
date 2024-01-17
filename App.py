@@ -10,7 +10,7 @@ st.markdown('<h1 style="text-align: center; font-family: \'Times New Roman\', Ti
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 with col1:
-    st.markdown('<p style="font-size: 24px; color: red; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Biomass</p>', unsafe_allow_html=True)
     
     def styled_slider(label, min_value, max_value, step, value, format="%.2f", color="black", label_margin_bottom="5px"):
         st.markdown(f'<p style="color: {color}; font-weight: bold; margin-bottom: {label_margin_bottom};">{label}</p>', unsafe_allow_html=True)
