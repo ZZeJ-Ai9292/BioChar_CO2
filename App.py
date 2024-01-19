@@ -30,8 +30,7 @@ with col2:
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; "> </p>', unsafe_allow_html=True)
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; "> </p>', unsafe_allow_html=True)
     st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; "> </p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; "> </p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Adsorption</p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-size: 24px; color: red; font-weight: bold; font-family: \'Times New Roman\', Times, serif; ">Adsorption</p>', unsafe_allow_html=True)
     feature31 = st.slider('CO2Ad-T (°C)', min_value=0, max_value=75, step=25, value=0)
     feature32 = st.slider('CO2Ad-P (bar)', min_value=0.1, max_value=1.0, step=0.1, value=1.0)
 
